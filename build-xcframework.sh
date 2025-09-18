@@ -22,6 +22,8 @@ COMMON_CXX_FLAGS="-Wno-macro-redefined -Wno-shorten-64-to-32 -Wno-unused-command
 
 # Common options for all builds
 COMMON_CMAKE_ARGS=(
+    -DCMAKE_C_FLAGS="-fvisibility=hidden"
+    -DCMAKE_CXX_FLAGS="-fvisibility=hidden"
     -DCMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED=NO
     -DCMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY=""
     -DCMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED=NO
